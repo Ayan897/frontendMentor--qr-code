@@ -1,0 +1,68 @@
+:root {
+   --White: hsl(0, 0%, 100%);
+   --Slate-300: hsl(212, 45%, 89%);
+   --Slate-500: hsl(216, 15%, 48%);
+   --Slate-900: hsl(218, 44%, 22%);
+}
+
+/* css reset */
+body,
+body *,
+body *::before,
+body *::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+/* element selectors */
+body {
+   background-color: var(--Slate-300);
+   font-family: "Outfit", sans-serif;
+}
+img {
+   height: auto;
+   max-width: 100%;
+   display: block;
+}
+
+.card-stack {
+   display: grid;
+   align-items: center;
+   justify-items: center;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   min-height: 100vh;
+   width: 100%;
+}
+.card {
+   --size: 15px;
+   margin: calc(var(--size) * 1.5);
+   padding: var(--size);
+   border-radius: var(--size);
+   background-color: var(--White);
+   max-width: 300px;
+}
+.card-img {
+   border-radius: inherit;
+   overflow: hidden;
+   margin-block-end: 1.2rem;
+}
+.card-content {
+   text-align: center;
+}
+.card-content h3 {
+   font-size: 1.4rem;
+   font-weight: 700;
+   letter-spacing: -1.5px;
+
+   color: var(--Slate-900);
+   margin-block-end: 0.8em;
+}
+.card-content p {
+   color: var(--Slate-500);
+   font-size: 15px;
+}
+@media screen and (min-width: 450px) {
+   .card-content {
+      padding-inline: var(--size);
+   }
+}
